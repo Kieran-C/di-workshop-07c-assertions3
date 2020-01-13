@@ -15,26 +15,29 @@ var Plane = function() {
   this.wings = 2;
 };
 
-/** Delete this line and the one at the bottom when you're ready for exercise 17
-    
+var myCar = new Car();
+var airlinePlane = new Plane();
+
+// /** Delete this line and the one at the bottom when you're ready for exercise 17
+
     suite('Unit Tests Exercise 17 - Object TypeOf',function(){
-      // 17 #typeOf asserts that value’s type is the given string, 
+      // 17 #typeOf asserts that value’s type is the given string,
       // as determined by Object.prototype.toString.
       // Use #typeOf or #notTypeOf where appropriate
       test('Object typeof',function(){
-        assert.fail(myCar, 'object');
+        assert.typeOf(myCar, 'object');
       }),
       test('type of Object property 1',function(){
-        assert.fail(myCar.model, 'string');
+        assert.typeOf(myCar.model, 'string');
       });
       test('type of Object property 2',function(){
-        assert.fail(airlinePlane.wings, 'string');
+        assert.notTypeOf(airlinePlane.wings, 'string');
       });
       test('type of Object property 3',function(){
-        assert.fail(airlinePlane.engines, 'array');
+        assert.typeOf(airlinePlane.engines, 'array');
       });
       test('type of Object property 4',function(){
-        assert.fail(myCar.wheels, 'number');
+        assert.typeOf(myCar.wheels, 'number');
       });
     })
 
